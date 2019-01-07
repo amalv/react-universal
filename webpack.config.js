@@ -8,7 +8,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const plugins = [
   new FriendlyErrorsWebpackPlugin(),
   new CompressionPlugin(),
-  new HtmlWebpackPlugin()
+  new HtmlWebpackPlugin({
+    template: 'index.html',
+  }),
 ];
 
 if (!dev) {
