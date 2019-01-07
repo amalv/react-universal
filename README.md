@@ -5,3 +5,4 @@
 # react-universal
 SSR foundation in React driven by performance and best practices
 
+[client side demo](https://loving-golick-23af51.netlify.com/)
