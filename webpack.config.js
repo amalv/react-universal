@@ -3,10 +3,12 @@ const path = require('path');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const plugins = [
   new FriendlyErrorsWebpackPlugin(),
   new CompressionPlugin(),
+  new HtmlWebpackPlugin()
 ];
 
 if (!dev) {
