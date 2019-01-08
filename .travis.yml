@@ -1,5 +1,7 @@
 language: node_js
 node_js:
  - '10.0'
+after_script: # Upload coverage reports
+ - COVERALLS_REPO_TOKEN=$coveralls_repo_token yarn coveralls
 after_success:
  - yarn lh --perf=100 https://loving-golick-23af51.netlify.com
