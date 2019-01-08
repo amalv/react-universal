@@ -1,3 +1,5 @@
 language: node_js
 node_js:
- - "node"
+ - '10.0'
+after_success:
+ - yarn lh -- https://loving-golick-23af51.netlify.com
