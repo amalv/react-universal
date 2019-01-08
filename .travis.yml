@@ -2,4 +2,4 @@ language: node_js
 node_js:
  - '10.0'
 after_success:
- - yarn lh -- https://loving-golick-23af51.netlify.com
+ - yarn lh --perf=100 https://loving-golick-23af51.netlify.com
