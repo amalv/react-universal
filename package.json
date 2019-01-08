@@ -4,14 +4,14 @@
   "description": "",
   "main": "webpack.config.js",
   "scripts": {
-    "test": "jest",
+    "test": "jest --coverage",
     "build": "webpack -p --progress",
     "dev": "webpack --watch --progress & nodemon index.js",
     "prod": "yarn build && node index.js",
     "linter": "eslint src",
     "bundlesize": "bundlesize",
     "coverage": "jest --coverage",
-    "coveralls": "cat ./coverage/lcov.info | node node_modules/.bin/coveralls",
+    "coveralls": "cat ./coverage/lcov.info | coveralls",
     "lh": "lighthouse-ci"
   },
   "dependencies": {
