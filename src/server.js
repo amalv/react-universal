@@ -8,7 +8,6 @@ import Layout from './components/App';
 
 function htmlTemplate(reactDom) {
   return `
-        <!DOCTYPE html>
         <html lang="en">
         <head>
             <meta charset="utf-8">
@@ -34,6 +33,7 @@ function shouldCompress(req, res) {
 }
 
 const app = express();
+
 app.use(compression({ filter: shouldCompress }));
 
 app.use(express.static(path.resolve(__dirname, '../dist')));

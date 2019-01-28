@@ -5,4 +5,12 @@
 # react-universal
 SSR foundation in React driven by performance and best practices
 
+# Quick Overview
+```sh
+yarn
+yarn dev
+```
+
+Then open [http://localhost:3000/](http://localhost:3000/)<br>
+
 [client side demo](https://loving-golick-23af51.netlify.com/)
