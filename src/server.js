@@ -3,6 +3,7 @@ import path from 'path';
 import compression from 'compression';
 import React from 'react';
 import { renderToString } from 'react-dom/server';
+import { StaticRouter } from 'react-router-dom';
 
 import Layout from './components/App';
 
@@ -39,8 +40,12 @@ app.use(compression({ filter: shouldCompress }));
 app.use(express.static(path.resolve(__dirname, '../dist')));
 
 app.get('/*', (req, res) => {
-  const jsx = (<Layout />);
-  const reactDom = renderToString(jsx);
+  const context = {};
+  const reactDom = renderToString(
+    <StaticRouter location={req.url} context={context}>
+      <Layout />
+    </StaticRouter>,
+  );
 
   res.writeHead(200, { 'Content-Type': 'text/html' });
   res.end(htmlTemplate(reactDom));
