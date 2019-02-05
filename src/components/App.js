@@ -1,5 +1,11 @@
 import React from 'react';
 import { Route, Link } from 'react-router-dom';
+import styled from 'styled-components';
+
+const StyledLink = styled(Link)`
+  color: palevioletred;
+  font-weight: bold;
+`;
 
 const Index = () => <h2>Home</h2>;
 const About = () => <h2>About</h2>;
@@ -20,13 +26,13 @@ export default class App extends React.Component {
         <nav>
           <ul>
             <li>
-              <Link to="/">{ title }</Link>
+              <StyledLink to="/">{ title }</StyledLink>
             </li>
             <li>
-              <Link to="/about/">About</Link>
+              <StyledLink to="/about/">About</StyledLink>
             </li>
             <li>
-              <Link to="/users/">Users</Link>
+              <StyledLink to="/users/">Users</StyledLink>
             </li>
           </ul>
         </nav>
