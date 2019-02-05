@@ -4,15 +4,18 @@ import compression from 'compression';
 import React from 'react';
 import { renderToString } from 'react-dom/server';
 import { StaticRouter } from 'react-router-dom';
+import { ServerStyleSheet, StyleSheetManager } from 'styled-components';
 
 import Layout from './components/App';
 
-function htmlTemplate(reactDom) {
+
+function htmlTemplate({ reactDom, styleTags }) {
   return `
         <html lang="en">
         <head>
             <meta charset="utf-8">
             <title>React Universal</title>
+            ${styleTags}
         </head>
         
         <body>
@@ -41,14 +44,19 @@ app.use(express.static(path.resolve(__dirname, '../dist')));
 
 app.get('/*', (req, res) => {
   const context = {};
+  const sheet = new ServerStyleSheet();
   const reactDom = renderToString(
     <StaticRouter location={req.url} context={context}>
-      <Layout />
+      <StyleSheetManager sheet={sheet.instance}>
+        <Layout />
+      </StyleSheetManager>
     </StaticRouter>,
   );
 
+  const styleTags = sheet.getStyleTags();
+
   res.writeHead(200, { 'Content-Type': 'text/html' });
-  res.end(htmlTemplate(reactDom));
+  res.end(htmlTemplate({ reactDom, styleTags }));
 });
 
 const port = 3000;
