@@ -5,16 +5,24 @@ import React from 'react';
 import { renderToString } from 'react-dom/server';
 import { StaticRouter } from 'react-router-dom';
 import { ServerStyleSheet, StyleSheetManager } from 'styled-components';
+import { SheetsRegistry } from 'jss';
+import JssProvider from 'react-jss/lib/JssProvider';
+import {
+  MuiThemeProvider,
+  createGenerateClassName,
+} from '@material-ui/core/styles';
 
 import Layout from './components/App';
 
-
-function htmlTemplate({ reactDom, styleTags }) {
+function htmlTemplate({ reactDom, styleTags, css }) {
   return `
         <html lang="en">
         <head>
             <meta charset="utf-8">
             <title>React Universal</title>
+            <style id="jss-server-side">${css}</style>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" />
             ${styleTags}
         </head>
         
@@ -45,18 +53,28 @@ app.use(express.static(path.resolve(__dirname, '../dist')));
 app.get('/*', (req, res) => {
   const context = {};
   const sheet = new ServerStyleSheet();
+
+  const sheetsRegistry = new SheetsRegistry();
+  const sheetsManager = new Map();
+  const generateClassName = createGenerateClassName();
+
   const reactDom = renderToString(
-    <StaticRouter location={req.url} context={context}>
-      <StyleSheetManager sheet={sheet.instance}>
-        <Layout />
-      </StyleSheetManager>
-    </StaticRouter>,
+    <JssProvider registry={sheetsRegistry} generateClassName={generateClassName}>
+      <MuiThemeProvider sheetsManager={sheetsManager}>
+        <StaticRouter location={req.url} context={context}>
+          <StyleSheetManager sheet={sheet.instance}>
+            <Layout />
+          </StyleSheetManager>
+        </StaticRouter>
+      </MuiThemeProvider>
+    </JssProvider>,
   );
 
+  const css = sheetsRegistry.toString();
   const styleTags = sheet.getStyleTags();
 
   res.writeHead(200, { 'Content-Type': 'text/html' });
-  res.end(htmlTemplate({ reactDom, styleTags }));
+  res.end(htmlTemplate({ reactDom, styleTags, css }));
 });
 
 const port = 3000;
