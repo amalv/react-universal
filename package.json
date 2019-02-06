@@ -1,6 +1,6 @@
 {
   "name": "react-universal",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "",
   "main": "webpack.config.js",
   "scripts": {
@@ -12,7 +12,7 @@
     "linter": "eslint src",
     "bundlesize": "bundlesize",
     "coverage": "jest --coverage",
-    "coveralls": "cat ./coverage/lcov.info | coveralls",
+    "coveralls": "jest --coverage --coverageReporters=text-lcov | coveralls",
     "lh": "lighthouse-ci"
   },
   "dependencies": {
