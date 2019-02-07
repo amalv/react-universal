@@ -4878,9 +4878,9 @@ levn@^0.3.0, levn@~0.3.0:
     prelude-ls "~1.1.2"
     type-check "~0.3.2"
 
-"lighthouse-ci@https://github.com/ebidel/lighthouse-ci":
-  version "0.1.0"
-  resolved "https://github.com/ebidel/lighthouse-ci#b0e8f0d503ce6cb630d599d3e309d1b804fb5d20"
+"lighthousebot@https://github.com/ebidel/lighthousebot":
+  version "0.2.0"
+  resolved "https://github.com/ebidel/lighthousebot#e25fb59a93620ed408d232349d206ffdbb2c3e17"
   dependencies:
     minimist "^1.2.0"
     node-fetch "^2.2.0"
