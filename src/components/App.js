@@ -4,6 +4,7 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Button from '@material-ui/core/Button';
 import styled from 'styled-components';
+import SignIn from './SignIn';
 
 const Base = styled.div`
   flex-grow: 1;
@@ -17,7 +18,6 @@ const Index = () => <h2>Home</h2>;
 const About = () => <h2>About</h2>;
 const Users = () => <h2>Users</h2>;
 const SignUp = () => <h2>Sign up</h2>;
-const SignIn = () => <h2>Sign in</h2>;
 
 class App extends React.Component {
   constructor() {

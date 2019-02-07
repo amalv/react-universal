@@ -9,10 +9,17 @@ import { SheetsRegistry } from 'jss';
 import JssProvider from 'react-jss/lib/JssProvider';
 import {
   MuiThemeProvider,
+  createMuiTheme,
   createGenerateClassName,
 } from '@material-ui/core/styles';
 
 import Layout from './components/App';
+
+const theme = createMuiTheme({
+  typography: {
+    useNextVariants: true,
+  },
+});
 
 function htmlTemplate({ reactDom, styleTags, css }) {
   return `
@@ -22,13 +29,14 @@ function htmlTemplate({ reactDom, styleTags, css }) {
             <title>React Universal</title>
             <style id="jss-server-side">${css}</style>
             <meta name="viewport" content="width=device-width, initial-scale=1">
-            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" />
+            <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
             ${styleTags}
         </head>
         
         <body>
             <div id="app">${reactDom}</div>
-            <script src="./app.bundle.js"></script>
+            <script src="./app.bundle.js" type="text/babel"></script>
         </body>
         </html>
     `;
@@ -60,7 +68,7 @@ app.get('/*', (req, res) => {
 
   const reactDom = renderToString(
     <JssProvider registry={sheetsRegistry} generateClassName={generateClassName}>
-      <MuiThemeProvider sheetsManager={sheetsManager}>
+      <MuiThemeProvider theme={theme} sheetsManager={sheetsManager}>
         <StaticRouter location={req.url} context={context}>
           <StyleSheetManager sheet={sheet.instance}>
             <Layout />
