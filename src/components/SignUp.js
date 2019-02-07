@@ -18,7 +18,7 @@ const Base = styled.main`
     margin-left: ${theme => theme.spacing.unit * 3}px;
     margin-right: ${theme => theme.spacing.unit * 3}px;
     ${theme => theme.breakpoints.up('md')} {
-      width: 400;
+      width: 400px;
       margin-left: auto;
       margin-right: auto;
     }
