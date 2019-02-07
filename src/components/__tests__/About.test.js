@@ -4,7 +4,7 @@ import {
   Router,
 } from 'react-router-dom';
 import { createMemoryHistory } from 'history';
-import SignIn from './SignIn';
+import About from '../About';
 
 const renderWithRouter = (
   ui,
@@ -15,12 +15,12 @@ const renderWithRouter = (
 });
 
 const renderComponent = () => renderWithRouter(
-  <SignIn />,
+  <About />,
 );
 
-describe('Test SignIn', () => {
-  test('it renders sign in text', async () => {
+describe('Test About', () => {
+  test('it renders About text', async () => {
     const { getByText } = renderComponent();
-    await waitForElement(() => getByText(/Sign in/i));
+    await waitForElement(() => getByText(/About/i));
   });
 });

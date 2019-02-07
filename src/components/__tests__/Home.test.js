@@ -1,11 +1,10 @@
 import React from 'react';
 import { render, waitForElement } from 'react-testing-library';
-import { StateMock } from '@react-mock/state';
 import {
   Router,
 } from 'react-router-dom';
 import { createMemoryHistory } from 'history';
-import App from './App';
+import Home from '../Home';
 
 const renderWithRouter = (
   ui,
@@ -15,15 +14,13 @@ const renderWithRouter = (
   history,
 });
 
-const renderComponent = ({ title }) => renderWithRouter(
-  <StateMock state={{ title }}>
-    <App />
-  </StateMock>,
+const renderComponent = () => renderWithRouter(
+  <Home />,
 );
 
-describe('Test App', () => {
-  test('it renders text intro', async () => {
-    const { getByText } = renderComponent({ title: 'Test' });
-    await waitForElement(() => getByText(/Test/i));
+describe('Test Home', () => {
+  test('it renders Home text', async () => {
+    const { getByText } = renderComponent();
+    await waitForElement(() => getByText(/Home/i));
   });
 });
