@@ -1,3 +1,4 @@
+// @flow
 import React from "react";
 import { Route, Link } from "react-router-dom";
 import AppBar from "@material-ui/core/AppBar";
@@ -10,6 +11,12 @@ import Home from "./Home";
 import About from "./About";
 import Users from "./Users";
 
+type Props = {};
+
+type State = {
+  title: string,
+};
+
 const Base = styled.div`
   flex-grow: 1;
 `;
@@ -18,7 +25,7 @@ const Grow = styled.div`
   flex-grow: 1;
 `;
 
-class App extends React.Component {
+class App extends React.Component<Props, State> {
   constructor() {
     super();
     this.state = {
