@@ -5,6 +5,10 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Button from '@material-ui/core/Button';
 import styled from 'styled-components';
 import SignIn from './SignIn';
+import SignUp from './SignUp';
+import Home from './Home';
+import About from './About';
+import Users from './Users';
 
 const Base = styled.div`
   flex-grow: 1;
@@ -13,11 +17,6 @@ const Base = styled.div`
 const Grow = styled.div`
   flex-grow: 1
 `;
-
-const Index = () => <h2>Home</h2>;
-const About = () => <h2>About</h2>;
-const Users = () => <h2>Users</h2>;
-const SignUp = () => <h2>Sign up</h2>;
 
 class App extends React.Component {
   constructor() {
@@ -57,7 +56,7 @@ class App extends React.Component {
             </Button>
           </Toolbar>
         </AppBar>
-        <Route path="/" exact component={Index} />
+        <Route path="/" exact component={Home} />
         <Route path="/about/" component={About} />
         <Route path="/users/" component={Users} />
         <Route path="/signup/" component={SignUp} />
