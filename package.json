@@ -1,6 +1,6 @@
 {
   "name": "react-universal",
-  "version": "0.5.2",
+  "version": "0.6.0",
   "description": "",
   "main": "webpack.config.js",
   "scripts": {
@@ -46,9 +46,11 @@
     "coveralls": "^3.0.2",
     "eslint": "^5.11.1",
     "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^4.0.0",
     "eslint-loader": "^2.1.1",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-prettier": "^3.0.1",
     "eslint-plugin-react": "^7.12.2",
     "friendly-errors-webpack-plugin": "^1.7.0",
     "html-webpack-plugin": "^3.2.0",
@@ -56,6 +58,7 @@
     "jest": "^24.1.0",
     "lighthousebot": "https://github.com/ebidel/lighthousebot",
     "npm-run-all": "^4.1.5",
+    "prettier": "^1.16.4",
     "react-testing-library": "^5.4.4",
     "webpack": "^4.28.3",
     "webpack-bundle-analyzer": "^3.0.3",

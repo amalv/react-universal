@@ -4,9 +4,13 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/c71400e0-2ad0-4051-a3ff-9eeab509a33b/deploy-status)](https://app.netlify.com/sites/loving-golick-23af51/deploys) [![Greenkeeper badge](https://badges.greenkeeper.io/amalv/react-universal.svg)](https://greenkeeper.io/)
 
 # react-universal
+
 SSR foundation in React driven by performance and best practices
 
 # Quick Overview
+
+Install the dependencies and run the dev server in order to try it:
+
 ```sh
 yarn
 yarn dev

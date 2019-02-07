@@ -1,28 +1,28 @@
-import React from 'react';
-import { Route, Link } from 'react-router-dom';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Button from '@material-ui/core/Button';
-import styled from 'styled-components';
-import SignIn from './SignIn';
-import SignUp from './SignUp';
-import Home from './Home';
-import About from './About';
-import Users from './Users';
+import React from "react";
+import { Route, Link } from "react-router-dom";
+import AppBar from "@material-ui/core/AppBar";
+import Toolbar from "@material-ui/core/Toolbar";
+import Button from "@material-ui/core/Button";
+import styled from "styled-components";
+import SignIn from "./SignIn";
+import SignUp from "./SignUp";
+import Home from "./Home";
+import About from "./About";
+import Users from "./Users";
 
 const Base = styled.div`
   flex-grow: 1;
 `;
 
 const Grow = styled.div`
-  flex-grow: 1
+  flex-grow: 1;
 `;
 
 class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      title: 'Home',
+      title: "Home",
     };
   }
 
@@ -39,20 +39,20 @@ class App extends React.Component {
         <AppBar position="static">
           <Toolbar>
             <Button component={IndexLink} color="inherit">
-              { title }
+              {title}
             </Button>
             <Button component={AboutLink} color="inherit">
-                About
+              About
             </Button>
             <Button component={UsersLink} color="inherit">
-               Users
+              Users
             </Button>
             <Grow />
             <Button component={SignUpLink} color="inherit">
-               Sign Up
+              Sign Up
             </Button>
             <Button component={SignInLink} color="inherit">
-               Sign In
+              Sign In
             </Button>
           </Toolbar>
         </AppBar>

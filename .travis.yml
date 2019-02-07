@@ -1,10 +1,11 @@
 language: node_js
 node_js:
- - '10.0'
+  - "10.0"
 script:
- - yarn build
+  - yarn build
 after_script:
- - yarn coveralls
+  - yarn linter
+  - yarn coveralls
 after_success:
- - yarn lh --perf=95 https://loving-golick-23af51.netlify.com
- - yarn bundlesize
+  - yarn lh --perf=95 https://loving-golick-23af51.netlify.com
+  - yarn bundlesize
