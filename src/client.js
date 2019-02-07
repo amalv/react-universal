@@ -1,16 +1,16 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import JssProvider from 'react-jss/lib/JssProvider';
+import React from "react";
+import ReactDOM from "react-dom";
+import JssProvider from "react-jss/lib/JssProvider";
 import {
   MuiThemeProvider,
   createMuiTheme,
   createGenerateClassName,
-} from '@material-ui/core/styles';
-import { BrowserRouter } from 'react-router-dom';
+} from "@material-ui/core/styles";
+import { BrowserRouter } from "react-router-dom";
 
-import App from './components/App';
+import App from "./components/App";
 
-const app = document.getElementById('app');
+const app = document.getElementById("app");
 
 const theme = createMuiTheme({
   typography: {
@@ -28,5 +28,5 @@ ReactDOM.hydrate(
       </MuiThemeProvider>
     </JssProvider>
   </BrowserRouter>,
-  app,
+  app
 );
