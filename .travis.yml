@@ -4,7 +4,7 @@ node_js:
 script:
  - yarn build
 after_script:
- - COVERALLS_REPO_TOKEN=$coveralls_repo_token yarn coveralls
+ - yarn coveralls
 after_success:
  - yarn lh --perf=95 https://loving-golick-23af51.netlify.com
  - yarn bundlesize
