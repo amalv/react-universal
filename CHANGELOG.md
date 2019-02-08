@@ -1,8 +1,7 @@
 # Change Log
 
-## [Unreleased](https://github.com/amalv/react-universal/tree/HEAD)
-
-[Full Changelog](https://github.com/amalv/react-universal/compare/v0.7.0...HEAD)
+## [v0.8.0](https://github.com/amalv/react-universal/tree/v0.8.0) (2019-02-08)
+[Full Changelog](https://github.com/amalv/react-universal/compare/v0.7.0...v0.8.0)
 
 **Merged pull requests:**
 
