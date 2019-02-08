@@ -3,6 +3,10 @@
 ## [v0.8.1](https://github.com/amalv/react-universal/tree/v0.8.1) (2019-02-08)
 [Full Changelog](https://github.com/amalv/react-universal/compare/v0.8.0...v0.8.1)
 
+**Merged pull requests:**
+
+- Fix CHANGELOG generation [\#20](https://github.com/amalv/react-universal/pull/20) ([amalv](https://github.com/amalv))
+
 ## [v0.8.0](https://github.com/amalv/react-universal/tree/v0.8.0) (2019-02-08)
 [Full Changelog](https://github.com/amalv/react-universal/compare/v0.7.0...v0.8.0)
 
