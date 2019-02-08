@@ -1,10 +1,13 @@
 {
   "name": "react-universal",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "description": "",
   "main": "webpack.config.js",
   "scripts": {
     "test": "jest --coverage",
+    "preversion": "yarn test && yarn changelog && git add . && git commit && echo \"Running tests and generating changelog for version $npm_package_version...\"",
+    "postversion": "git fetch && git rebase -i origin/master && git push --tags && echo \"Successfully released version $npm_package_version!\"",
+    "changelog": "github_changelog_generator amalv/react-universal",
     "build": "webpack -p --config=webpack.prod.js",
     "server": "node index.js",
     "client": "webpack --watch --config=webpack.dev.js",
