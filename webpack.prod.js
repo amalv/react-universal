@@ -1,53 +1,50 @@
-const path = require('path');
-const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
-const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
-const CompressionPlugin = require('compression-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const path = require("path");
+const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
+const FriendlyErrorsWebpackPlugin = require("friendly-errors-webpack-plugin");
+const CompressionPlugin = require("compression-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CleanWebpackPlugin = require("clean-webpack-plugin");
 
 const plugins = [
-  new CleanWebpackPlugin(['dist']),
+  new CleanWebpackPlugin(["dist"]),
   new FriendlyErrorsWebpackPlugin(),
   new CompressionPlugin(),
   new HtmlWebpackPlugin({
-    template: 'index.html',
+    template: "index.html",
   }),
   new BundleAnalyzerPlugin({
-    analyzerMode: 'static',
-    reportFilename: 'webpack-report.html',
+    analyzerMode: "static",
+    reportFilename: "webpack-report.html",
     openAnalyzer: false,
   }),
 ];
 
 module.exports = {
-  context: path.join(__dirname, 'src'),
+  context: path.join(__dirname, "src"),
   entry: {
-    app: './client.js',
+    app: "./client.js",
   },
   resolve: {
-    modules: [
-      path.resolve('./src'),
-      'node_modules',
-    ],
+    modules: [path.resolve("./src"), "node_modules"],
   },
   module: {
     rules: [
       {
-        enforce: 'pre',
+        enforce: "pre",
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: 'eslint-loader',
+        loader: "eslint-loader",
       },
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: 'babel-loader',
+        loader: "babel-loader",
       },
     ],
   },
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: '[name].bundle.js',
+    path: path.resolve(__dirname, "dist"),
+    filename: "[name].bundle.js",
   },
   plugins,
 };
