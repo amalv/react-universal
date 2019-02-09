@@ -36,7 +36,7 @@ function htmlTemplate({ reactDom, styleTags, css }) {
         
         <body>
             <div id="app">${reactDom}</div>
-            <script src="./app.bundle.js" type="text/babel"></script>
+            <script src="/app.bundle.js"></script>
         </body>
         </html>
     `;
