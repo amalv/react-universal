@@ -1,5 +1,12 @@
 # Change Log
 
+## [v0.8.2](https://github.com/amalv/react-universal/tree/v0.8.2) (2019-02-09)
+[Full Changelog](https://github.com/amalv/react-universal/compare/v0.8.1...v0.8.2)
+
+**Merged pull requests:**
+
+- Remove type from script tag in server [\#21](https://github.com/amalv/react-universal/pull/21) ([amalv](https://github.com/amalv))
+
 ## [v0.8.1](https://github.com/amalv/react-universal/tree/v0.8.1) (2019-02-08)
 [Full Changelog](https://github.com/amalv/react-universal/compare/v0.8.0...v0.8.1)
 
