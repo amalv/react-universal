@@ -26,8 +26,10 @@ const PaperStyled = styled(Paper)`
 `;
 
 const AvatarStyled = styled(Avatar)`
-  margin: ${theme => theme.spacing.unit}px;
-  background-color: ${theme => theme.palette.secondary.main};
+  && {
+    margin: ${theme => theme.spacing.unit}px;
+    background-color: ${theme => theme.palette.secondary.main};
+  }
 `;
 
 const Form = styled.form`
@@ -36,7 +38,9 @@ const Form = styled.form`
 `;
 
 const SubmitButtonStyled = styled(Button)`
-  margin-top: ${theme => theme.spacing.unit * 3}px;
+  && {
+    margin-top: ${theme => theme.spacing.unit * 3}px;
+  }
 `;
 
 export { Base, PaperStyled, AvatarStyled, Form, SubmitButtonStyled };
