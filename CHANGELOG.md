@@ -1,5 +1,12 @@
 # Change Log
 
+## [v0.10.0](https://github.com/amalv/react-universal/tree/v0.10.0) (2019-02-11)
+[Full Changelog](https://github.com/amalv/react-universal/compare/v0.9.1...v0.10.0)
+
+**Merged pull requests:**
+
+- Separate styles from auth components [\#24](https://github.com/amalv/react-universal/pull/24) ([amalv](https://github.com/amalv))
+
 ## [v0.9.1](https://github.com/amalv/react-universal/tree/v0.9.1) (2019-02-11)
 [Full Changelog](https://github.com/amalv/react-universal/compare/v0.9.0...v0.9.1)
 
