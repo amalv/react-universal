@@ -1,5 +1,12 @@
 # Change Log
 
+## [v0.10.1](https://github.com/amalv/react-universal/tree/v0.10.1) (2019-02-11)
+[Full Changelog](https://github.com/amalv/react-universal/compare/v0.10.0...v0.10.1)
+
+**Merged pull requests:**
+
+- Fix specificity issues between material-ui and styled-components [\#26](https://github.com/amalv/react-universal/pull/26) ([amalv](https://github.com/amalv))
+
 ## [v0.10.0](https://github.com/amalv/react-universal/tree/v0.10.0) (2019-02-11)
 [Full Changelog](https://github.com/amalv/react-universal/compare/v0.9.1...v0.10.0)
 
