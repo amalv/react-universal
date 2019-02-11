@@ -11,6 +11,9 @@ import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
 import { withTheme } from "@material-ui/core/styles";
 import styled from "styled-components";
+import type { Theme } from "@material-ui/core/styles/createMuiTheme";
+
+type Props = { theme: Theme };
 
 const Base = styled.main`
   width: auto;
@@ -48,8 +51,7 @@ const SubmitButtonStyled = styled(Button)`
   margin-top: ${theme => theme.spacing.unit * 3}px;
 `;
 
-const SignUp = props => {
-  // eslint-disable-next-line react/prop-types
+const SignUp = (props: Props) => {
   const { theme } = props;
   const { zIndex, ...rest } = theme;
   return (
