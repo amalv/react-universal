@@ -1,58 +1,24 @@
 // @flow
 import React from "react";
-import Avatar from "@material-ui/core/Avatar";
-import Button from "@material-ui/core/Button";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import FormControl from "@material-ui/core/FormControl";
 import Input from "@material-ui/core/Input";
 import InputLabel from "@material-ui/core/InputLabel";
 import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
-import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
 import { withTheme } from "@material-ui/core/styles";
-import styled from "styled-components";
 import type { Theme } from "@material-ui/core/styles/createMuiTheme";
+import {
+  Base,
+  PaperStyled,
+  AvatarStyled,
+  Form,
+  SubmitButtonStyled,
+} from "./SignIn.styles";
 
 type Props = { theme: Theme };
 
-const Base = styled.main`
-  width: auto;
-  display: block;
-  margin-left: ${theme => theme.spacing.unit * 3}px;
-  margin-right: ${theme => theme.spacing.unit * 3}px;
-  ${theme => theme.breakpoints.up("md")} {
-    width: 400px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-`;
-
-const PaperStyled = styled(Paper)`
-    margin-top: ${theme => theme.spacing.unit * 8}px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: ${theme => theme.spacing.unit * 2}px ${theme =>
-  theme.spacing.unit * 3}px ${theme => theme.spacing.unit * 3}px;
-  }}
-`;
-
-const AvatarStyled = styled(Avatar)`
-  margin: ${theme => theme.spacing.unit}px;
-  background-color: ${theme => theme.palette.secondary.main};
-`;
-
-const Form = styled.form`
-  width: 100%;
-  margin-top: ${theme => theme.spacing.unit}px;
-`;
-
-const SubmitButtonStyled = styled(Button)`
-  margin-top: ${theme => theme.spacing.unit * 3}px;
-`;
-
 const SignIn = (props: Props) => {
-  // eslint-disable-next-line react/prop-types
   const { theme } = props;
   const { zIndex, ...rest } = theme;
   return (
