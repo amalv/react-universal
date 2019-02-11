@@ -7,5 +7,5 @@ after_script:
   - yarn linter
   - yarn coveralls
 after_success:
-  - yarn lh --perf=95 https://loving-golick-23af51.netlify.com
+  - yarn lh --perf=90 https://loving-golick-23af51.netlify.com
   - yarn bundlesize
