@@ -1,5 +1,12 @@
 # Change Log
 
+## [v0.9.1](https://github.com/amalv/react-universal/tree/v0.9.1) (2019-02-11)
+[Full Changelog](https://github.com/amalv/react-universal/compare/v0.9.0...v0.9.1)
+
+**Merged pull requests:**
+
+- Fix eslint warning auth components [\#23](https://github.com/amalv/react-universal/pull/23) ([amalv](https://github.com/amalv))
+
 ## [v0.9.0](https://github.com/amalv/react-universal/tree/v0.9.0) (2019-02-11)
 [Full Changelog](https://github.com/amalv/react-universal/compare/v0.8.2...v0.9.0)
 
