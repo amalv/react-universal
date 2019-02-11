@@ -1,5 +1,12 @@
 # Change Log
 
+## [v0.9.0](https://github.com/amalv/react-universal/tree/v0.9.0) (2019-02-11)
+[Full Changelog](https://github.com/amalv/react-universal/compare/v0.8.2...v0.9.0)
+
+**Merged pull requests:**
+
+- Add UserService [\#22](https://github.com/amalv/react-universal/pull/22) ([amalv](https://github.com/amalv))
+
 ## [v0.8.2](https://github.com/amalv/react-universal/tree/v0.8.2) (2019-02-09)
 [Full Changelog](https://github.com/amalv/react-universal/compare/v0.8.1...v0.8.2)
 
