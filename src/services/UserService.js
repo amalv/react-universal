@@ -11,4 +11,11 @@ const registerUser = user => {
   });
 };
 
-export { getAllUsers, registerUser };
+const loginUser = (username, password) => {
+  return Api.post("/login", {
+    username,
+    password,
+  });
+};
+
+export { getAllUsers, registerUser, loginUser };
