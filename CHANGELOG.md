@@ -1,5 +1,12 @@
 # Change Log
 
+## [v0.10.2](https://github.com/amalv/react-universal/tree/v0.10.2) (2019-02-12)
+[Full Changelog](https://github.com/amalv/react-universal/compare/v0.10.1...v0.10.2)
+
+**Merged pull requests:**
+
+- Update react-testing-library to version 5.6.1 [\#27](https://github.com/amalv/react-universal/pull/27) ([amalv](https://github.com/amalv))
+
 ## [v0.10.1](https://github.com/amalv/react-universal/tree/v0.10.1) (2019-02-11)
 [Full Changelog](https://github.com/amalv/react-universal/compare/v0.10.0...v0.10.1)
 
