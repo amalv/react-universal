@@ -2,6 +2,8 @@ import express from "express";
 import path from "path";
 import compression from "compression";
 import React from "react";
+import { createStore } from "redux";
+import { Provider } from "react-redux";
 import { renderToString } from "react-dom/server";
 import { StaticRouter } from "react-router-dom";
 import { ServerStyleSheet, StyleSheetManager } from "styled-components";
@@ -12,8 +14,10 @@ import {
   createMuiTheme,
   createGenerateClassName,
 } from "@material-ui/core/styles";
+import cors from "cors";
 
 import Layout from "./components/App";
+import defaultState from "./reducers";
 
 const theme = createMuiTheme({
   typography: {
@@ -21,7 +25,7 @@ const theme = createMuiTheme({
   },
 });
 
-function htmlTemplate({ reactDom, styleTags, css }) {
+function htmlTemplate({ reactDom, styleTags, css, preloadedState }) {
   return `
         <html lang="en">
         <head>
@@ -36,6 +40,14 @@ function htmlTemplate({ reactDom, styleTags, css }) {
         
         <body>
             <div id="app">${reactDom}</div>
+        <script>
+          // WARNING: See the following for security issues around embedding JSON in HTML:
+          // http://redux.js.org/recipes/ServerRendering.html#security-considerations
+          window.__PRELOADED_STATE__ = ${JSON.stringify(preloadedState).replace(
+            /</g,
+            "\\u003c"
+          )}
+        </script>
             <script src="/app.bundle.js"></script>
         </body>
         </html>
@@ -57,6 +69,7 @@ const app = express();
 app.use(compression({ filter: shouldCompress }));
 
 app.use(express.static(path.resolve(__dirname, "../dist")));
+app.use(cors());
 
 app.get("/*", (req, res) => {
   const context = {};
@@ -66,26 +79,30 @@ app.get("/*", (req, res) => {
   const sheetsManager = new Map();
   const generateClassName = createGenerateClassName();
 
+  const store = createStore(defaultState);
   const reactDom = renderToString(
-    <JssProvider
-      registry={sheetsRegistry}
-      generateClassName={generateClassName}
-    >
-      <MuiThemeProvider theme={theme} sheetsManager={sheetsManager}>
-        <StaticRouter location={req.url} context={context}>
-          <StyleSheetManager sheet={sheet.instance}>
-            <Layout />
-          </StyleSheetManager>
-        </StaticRouter>
-      </MuiThemeProvider>
-    </JssProvider>
+    <Provider store={store}>
+      <JssProvider
+        registry={sheetsRegistry}
+        generateClassName={generateClassName}
+      >
+        <MuiThemeProvider theme={theme} sheetsManager={sheetsManager}>
+          <StaticRouter location={req.url} context={context}>
+            <StyleSheetManager sheet={sheet.instance}>
+              <Layout />
+            </StyleSheetManager>
+          </StaticRouter>
+        </MuiThemeProvider>
+      </JssProvider>
+    </Provider>
   );
 
   const css = sheetsRegistry.toString();
   const styleTags = sheet.getStyleTags();
+  const preloadedState = store.getState();
 
   res.writeHead(200, { "Content-Type": "text/html" });
-  res.end(htmlTemplate({ reactDom, styleTags, css }));
+  res.end(htmlTemplate({ reactDom, styleTags, css, preloadedState }));
 });
 
 const port = 3000;

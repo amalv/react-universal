@@ -43,4 +43,10 @@ const SubmitButtonStyled = styled(Button)`
   }
 `;
 
-export { Base, PaperStyled, AvatarStyled, Form, SubmitButtonStyled };
+const Error = styled.span`
+  color: #a94442;
+  font-size: 12px;
+  margin-top: 5px;
+`;
+
+export { Base, PaperStyled, AvatarStyled, Form, SubmitButtonStyled, Error };
