@@ -114,7 +114,8 @@ class SignIn extends React.Component<Props, State> {
   }
 }
 
+export const StyledSignIn = withTheme()(SignIn);
 export default connect(
   null,
   null
-)(withTheme()(SignIn));
+)(withTheme()(StyledSignIn));
