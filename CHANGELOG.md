@@ -1,5 +1,19 @@
 # Change Log
 
+## [v0.11.0](https://github.com/amalv/react-universal/tree/v0.11.0) (2019-02-15)
+[Full Changelog](https://github.com/amalv/react-universal/compare/v0.10.2...v0.11.0)
+
+**Closed issues:**
+
+- An in-range update of react-testing-library is breaking the build 🚨 [\#25](https://github.com/amalv/react-universal/issues/25)
+
+**Merged pull requests:**
+
+- Fix tests for auth components [\#31](https://github.com/amalv/react-universal/pull/31) ([amalv](https://github.com/amalv))
+- Connect Auth forms with user service [\#30](https://github.com/amalv/react-universal/pull/30) ([amalv](https://github.com/amalv))
+- Update flow-bin to the latest version 🚀 [\#29](https://github.com/amalv/react-universal/pull/29) ([greenkeeper[bot]](https://github.com/apps/greenkeeper))
+- Replace use of deprecated/unsafe new Buffer constructor [\#28](https://github.com/amalv/react-universal/pull/28) ([amalv](https://github.com/amalv))
+
 ## [v0.10.2](https://github.com/amalv/react-universal/tree/v0.10.2) (2019-02-12)
 [Full Changelog](https://github.com/amalv/react-universal/compare/v0.10.1...v0.10.2)
 
