@@ -113,7 +113,8 @@ class SignUp extends React.Component<Props, State> {
   }
 }
 
+export const StyledSignUp = withTheme()(SignUp);
 export default connect(
   null,
   null
-)(withTheme()(SignUp));
+)(withTheme()(StyledSignUp));

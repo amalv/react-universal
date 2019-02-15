@@ -1,25 +1,10 @@
 import React from "react";
 import { render, waitForElement } from "react-testing-library";
-import { Router } from "react-router-dom";
-import { createMemoryHistory } from "history";
-import SignIn from "../SignIn";
-
-const renderWithRouter = (
-  ui,
-  {
-    route = "/",
-    history = createMemoryHistory({ initialEntries: [route] }),
-  } = {}
-) => ({
-  ...render(<Router history={history}>{ui}</Router>),
-  history,
-});
-
-const renderComponent = () => renderWithRouter(<SignIn />);
+import { StyledSignIn } from "../SignIn";
 
 describe("Test SignIn", () => {
   test("it renders sign in text", async () => {
-    const { getByText } = renderComponent();
+    const { getByText } = render(<StyledSignIn />);
     await waitForElement(() => getByText(/Sign in/i));
   });
 });
