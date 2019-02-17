@@ -2,7 +2,6 @@ import express from "express";
 import path from "path";
 import compression from "compression";
 import React from "react";
-import { createStore } from "redux";
 import { Provider } from "react-redux";
 import { renderToString } from "react-dom/server";
 import { StaticRouter } from "react-router-dom";
@@ -15,9 +14,9 @@ import {
   createGenerateClassName,
 } from "@material-ui/core/styles";
 import cors from "cors";
+import { configureStore } from "./reducers";
 
 import Layout from "./components/App";
-import defaultState from "./reducers";
 
 const theme = createMuiTheme({
   typography: {
@@ -79,7 +78,7 @@ app.get("/*", (req, res) => {
   const sheetsManager = new Map();
   const generateClassName = createGenerateClassName();
 
-  const store = createStore(defaultState);
+  const { store } = configureStore(req.url);
   const reactDom = renderToString(
     <Provider store={store}>
       <JssProvider

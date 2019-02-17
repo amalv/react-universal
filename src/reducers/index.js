@@ -1,6 +1,4 @@
-export default (state = 0, action) => {
-  switch (action.type) {
-    default:
-      return state;
-  }
-};
+import configureStore from "./configureStore";
+import reducers from "./reducers";
+
+export { configureStore, reducers };
