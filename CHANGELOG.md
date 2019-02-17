@@ -1,5 +1,12 @@
 # Change Log
 
+## [v0.12.0](https://github.com/amalv/react-universal/tree/v0.12.0) (2019-02-17)
+[Full Changelog](https://github.com/amalv/react-universal/compare/v0.11.0...v0.12.0)
+
+**Merged pull requests:**
+
+- Add history to manage session [\#32](https://github.com/amalv/react-universal/pull/32) ([amalv](https://github.com/amalv))
+
 ## [v0.11.0](https://github.com/amalv/react-universal/tree/v0.11.0) (2019-02-15)
 [Full Changelog](https://github.com/amalv/react-universal/compare/v0.10.2...v0.11.0)
 
