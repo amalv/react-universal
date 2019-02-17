@@ -1,3 +1,4 @@
+import { push } from "connected-react-router";
 import { loginUser } from "../services";
 
 export const LOGIN_REQUEST = "LOGIN_REQUEST";
@@ -25,6 +26,7 @@ export const login = (username, password) => {
     loginUser(username, password).then(
       loggedUser => {
         dispatch(success(loggedUser));
+        dispatch(push("/"));
       },
       error => {
         dispatch(failure(error));
