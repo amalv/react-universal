@@ -51,6 +51,11 @@ server.post("/login", passport.authenticate("local"), (req, res) => {
   res.sendStatus(201);
 });
 
+server.get("/logout", (req, res) => {
+  req.logout();
+  res.redirect("/");
+});
+
 server.use(router);
 server.listen(3001, () => {
   console.log("JSON Server is running");

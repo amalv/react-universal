@@ -1,3 +1,8 @@
-import { getAllUsers, registerUser, loginUser } from "./UserService";
+import {
+  getAllUsers,
+  registerUser,
+  loginUser,
+  logoutUser,
+} from "./UserService";
 
-export { getAllUsers, registerUser, loginUser };
+export { getAllUsers, registerUser, loginUser, logoutUser };
