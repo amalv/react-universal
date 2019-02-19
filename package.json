@@ -29,6 +29,7 @@
     "cors": "^2.8.5",
     "express": "^4.16.4",
     "history": "^4.7.2",
+    "js-cookie": "^2.2.0",
     "jss": "^9.8.7",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",

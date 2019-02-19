@@ -6,6 +6,9 @@ import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Button from "@material-ui/core/Button";
 import styled from "styled-components";
+import type { Dispatch } from "redux";
+import { establishCurrentUser } from "../actions";
+import { isServer } from "../reducers/configureStore";
 
 const Grow = styled.div`
   flex-grow: 1;
@@ -45,9 +48,17 @@ const links = [
 
 type Props = {
   isAuthenticated: boolean,
+  establishCurrentUser: Dispatch,
 };
 
 class Header extends React.Component<Props> {
+  componentWillMount() {
+    if (!isServer) {
+      // eslint-disable-next-line react/destructuring-assignment
+      this.props.establishCurrentUser();
+    }
+  }
+
   renderLink = link => {
     const button = (
       <Button
@@ -96,7 +107,11 @@ const mapStateToProps = state => ({
   isAuthenticated: state.authentication.isAuthenticated,
 });
 
+const actions = {
+  establishCurrentUser,
+};
+
 export default connect(
   mapStateToProps,
-  null
+  actions
 )(Header);
