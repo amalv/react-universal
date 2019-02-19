@@ -5,7 +5,14 @@ import {
   register,
 } from "./register";
 
-import { LOGIN_REQUEST, LOGIN_SUCCESS, LOGIN_FAILURE, login } from "./login";
+import {
+  LOGIN_REQUEST,
+  LOGIN_SUCCESS,
+  LOGIN_FAILURE,
+  LOGOUT_SUCCESS,
+  login,
+  logout,
+} from "./authentication";
 
 export {
   USER_REGISTER_REQUEST,
@@ -14,6 +21,8 @@ export {
   LOGIN_REQUEST,
   LOGIN_SUCCESS,
   LOGIN_FAILURE,
+  LOGOUT_SUCCESS,
   register,
   login,
+  logout,
 };
