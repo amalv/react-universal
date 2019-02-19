@@ -1,5 +1,12 @@
 # Change Log
 
+## [v0.16.0](https://github.com/amalv/react-universal/tree/v0.16.0) (2019-02-19)
+[Full Changelog](https://github.com/amalv/react-universal/compare/v0.15.0...v0.16.0)
+
+**Merged pull requests:**
+
+- Add Routes component to App component [\#38](https://github.com/amalv/react-universal/pull/38) ([amalv](https://github.com/amalv))
+
 ## [v0.15.0](https://github.com/amalv/react-universal/tree/v0.15.0) (2019-02-19)
 [Full Changelog](https://github.com/amalv/react-universal/compare/v0.14.0...v0.15.0)
 
