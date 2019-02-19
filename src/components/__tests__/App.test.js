@@ -1,4 +1,5 @@
 import React from "react";
+import thunk from "redux-thunk";
 import configureStore from "redux-mock-store";
 import { render, waitForElement } from "react-testing-library";
 import { Router } from "react-router-dom";
@@ -24,7 +25,8 @@ beforeEach(() => {
   };
 
   // Mock store
-  const mockStore = configureStore();
+  const middlewares = [thunk];
+  const mockStore = configureStore(middlewares);
   store = mockStore({
     router: {
       action: "POP",
