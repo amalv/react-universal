@@ -1,5 +1,13 @@
 # Change Log
 
+## [v0.15.0](https://github.com/amalv/react-universal/tree/v0.15.0) (2019-02-19)
+[Full Changelog](https://github.com/amalv/react-universal/compare/v0.14.0...v0.15.0)
+
+**Merged pull requests:**
+
+- Fix bug missing redux thunk middleware in app test [\#37](https://github.com/amalv/react-universal/pull/37) ([amalv](https://github.com/amalv))
+- Add browser session [\#36](https://github.com/amalv/react-universal/pull/36) ([amalv](https://github.com/amalv))
+
 ## [v0.14.0](https://github.com/amalv/react-universal/tree/v0.14.0) (2019-02-19)
 [Full Changelog](https://github.com/amalv/react-universal/compare/v0.13.0...v0.14.0)
 
