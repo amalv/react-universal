@@ -1,5 +1,16 @@
 # Change Log
 
+## [v0.14.0](https://github.com/amalv/react-universal/tree/v0.14.0) (2019-02-19)
+[Full Changelog](https://github.com/amalv/react-universal/compare/v0.13.0...v0.14.0)
+
+**Closed issues:**
+
+- An in-range update of react-testing-library is breaking the build 🚨 [\#34](https://github.com/amalv/react-universal/issues/34)
+
+**Merged pull requests:**
+
+- Greenkeeper/react testing library 5.9.0 [\#35](https://github.com/amalv/react-universal/pull/35) ([amalv](https://github.com/amalv))
+
 ## [v0.13.0](https://github.com/amalv/react-universal/tree/v0.13.0) (2019-02-19)
 [Full Changelog](https://github.com/amalv/react-universal/compare/v0.12.0...v0.13.0)
 
