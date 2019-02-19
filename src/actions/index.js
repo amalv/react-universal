@@ -12,6 +12,7 @@ import {
   LOGOUT_SUCCESS,
   login,
   logout,
+  establishCurrentUser,
 } from "./authentication";
 
 export {
@@ -25,4 +26,5 @@ export {
   register,
   login,
   logout,
+  establishCurrentUser,
 };

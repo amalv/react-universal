@@ -1,3 +1,4 @@
+import { push } from "connected-react-router";
 import { registerUser } from "../services";
 
 export const USER_REGISTER_REQUEST = "USER_REGISTER_REQUEST";
@@ -26,6 +27,7 @@ export const register = user => {
     registerUser(user).then(
       registeredUser => {
         dispatch(success(registeredUser));
+        dispatch(push("/signin"));
       },
       error => {
         dispatch(failure(error));
