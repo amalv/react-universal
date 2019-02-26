@@ -1,5 +1,12 @@
 # Change Log
 
+## [v0.17.0](https://github.com/amalv/react-universal/tree/v0.17.0) (2019-02-26)
+[Full Changelog](https://github.com/amalv/react-universal/compare/v0.16.0...v0.17.0)
+
+**Merged pull requests:**
+
+- Add google login [\#41](https://github.com/amalv/react-universal/pull/41) ([amalv](https://github.com/amalv))
+
 ## [v0.16.0](https://github.com/amalv/react-universal/tree/v0.16.0) (2019-02-19)
 [Full Changelog](https://github.com/amalv/react-universal/compare/v0.15.0...v0.16.0)
 
