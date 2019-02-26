@@ -45,6 +45,12 @@ export const establishCurrentUser = () => dispatch => {
   }
 };
 
+export const socialLoginSuccess = username => dispatch => {
+  Cookies.set("react-universal", { username });
+  dispatch(loginSuccess({ username }));
+  dispatch(push("/"));
+};
+
 export const login = (username, password) => dispatch => {
   dispatch(loginRequest());
 

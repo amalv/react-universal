@@ -12,6 +12,7 @@ import {
   LOGOUT_SUCCESS,
   login,
   logout,
+  socialLoginSuccess,
   establishCurrentUser,
 } from "./authentication";
 
@@ -26,5 +27,6 @@ export {
   register,
   login,
   logout,
+  socialLoginSuccess,
   establishCurrentUser,
 };
