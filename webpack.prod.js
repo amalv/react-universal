@@ -4,6 +4,7 @@ const FriendlyErrorsWebpackPlugin = require("friendly-errors-webpack-plugin");
 const CompressionPlugin = require("compression-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
+const webpack = require("webpack");
 
 const plugins = [
   new CleanWebpackPlugin(["dist"]),
@@ -16,6 +17,11 @@ const plugins = [
     analyzerMode: "static",
     reportFilename: "webpack-report.html",
     openAnalyzer: false,
+  }),
+  new webpack.DefinePlugin({
+    "process.env.GOOGLE_CLIENT_ID": JSON.stringify(
+      process.env.GOOGLE_CLIENT_ID
+    ),
   }),
 ];
 
