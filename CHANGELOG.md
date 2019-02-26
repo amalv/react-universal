@@ -1,5 +1,12 @@
 # Change Log
 
+## [v0.18.0](https://github.com/amalv/react-universal/tree/v0.18.0) (2019-02-26)
+[Full Changelog](https://github.com/amalv/react-universal/compare/v0.17.0...v0.18.0)
+
+**Merged pull requests:**
+
+- Update react-testing-library to the latest version 🚀 [\#40](https://github.com/amalv/react-universal/pull/40) ([greenkeeper[bot]](https://github.com/apps/greenkeeper))
+
 ## [v0.17.0](https://github.com/amalv/react-universal/tree/v0.17.0) (2019-02-26)
 [Full Changelog](https://github.com/amalv/react-universal/compare/v0.16.0...v0.17.0)
 
