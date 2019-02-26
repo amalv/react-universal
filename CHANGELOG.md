@@ -1,5 +1,12 @@
 # Change Log
 
+## [v0.18.1](https://github.com/amalv/react-universal/tree/v0.18.1) (2019-02-26)
+[Full Changelog](https://github.com/amalv/react-universal/compare/v0.18.0...v0.18.1)
+
+**Merged pull requests:**
+
+- Fix bug reading environment variable client side [\#42](https://github.com/amalv/react-universal/pull/42) ([amalv](https://github.com/amalv))
+
 ## [v0.18.0](https://github.com/amalv/react-universal/tree/v0.18.0) (2019-02-26)
 [Full Changelog](https://github.com/amalv/react-universal/compare/v0.17.0...v0.18.0)
 

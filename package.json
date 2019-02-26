@@ -1,6 +1,6 @@
 {
   "name": "react-universal",
-  "version": "0.18.0",
+  "version": "0.18.1",
   "description": "",
   "main": "webpack.config.js",
   "scripts": {
