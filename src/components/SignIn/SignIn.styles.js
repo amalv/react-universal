@@ -37,7 +37,7 @@ const Form = styled.form`
   margin-top: ${theme => theme.spacing.unit}px;
 `;
 
-const SubmitButtonStyled = styled(Button)`
+const ButtonStyled = styled(Button)`
   && {
     margin-top: ${theme => theme.spacing.unit * 3}px;
   }
@@ -49,4 +49,4 @@ const Error = styled.span`
   margin-top: 5px;
 `;
 
-export { Base, PaperStyled, AvatarStyled, Form, SubmitButtonStyled, Error };
+export { Base, PaperStyled, AvatarStyled, Form, ButtonStyled, Error };

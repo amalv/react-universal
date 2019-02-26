@@ -13,3 +13,6 @@ dist
 .idea/
 
 coverage
+
+# Environment variables
+.env

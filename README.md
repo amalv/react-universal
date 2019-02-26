@@ -7,15 +7,22 @@
 
 SSR foundation in React driven by performance and best practices
 
-# Quick Overview
+[client side demo](https://loving-golick-23af51.netlify.com/)
 
-Install the dependencies and run the dev server in order to try it:
+# Usage
+
+## Install the dependencies and run the dev server
 
 ```sh
-yarn
-yarn dev
+yarn && yarn dev
 ```
 
 Then open [http://localhost:3000/](http://localhost:3000/)<br>
 
-[client side demo](https://loving-golick-23af51.netlify.com/)
+## Set up Google Sign In (Optional)
+
+Create an `.env` file in the root of the project with the following configuration:
+
+```.sh
+GOOGLE_CLIENT_ID=<YOUR_GOOGLE_CLIENT_ID_HERE>
+```
