@@ -1,4 +1,3 @@
-import { push } from "connected-react-router";
 import Cookies from "js-cookie";
 import { loginUser, logoutUser } from "../services";
 
@@ -48,7 +47,6 @@ export const establishCurrentUser = () => dispatch => {
 export const socialLoginSuccess = username => dispatch => {
   Cookies.set("react-universal", { username });
   dispatch(loginSuccess({ username }));
-  dispatch(push("/"));
 };
 
 export const login = (username, password) => dispatch => {
@@ -58,7 +56,6 @@ export const login = (username, password) => dispatch => {
     () => {
       Cookies.set("react-universal", { username });
       dispatch(loginSuccess({ username }));
-      dispatch(push("/"));
     },
     error => {
       dispatch(loginFailure(error));
