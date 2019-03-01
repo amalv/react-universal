@@ -1,5 +1,17 @@
 # Change Log
 
+## [v0.19.0](https://github.com/amalv/react-universal/tree/v0.19.0) (2019-03-01)
+[Full Changelog](https://github.com/amalv/react-universal/compare/v0.18.1...v0.19.0)
+
+**Closed issues:**
+
+- An in-range update of react-redux is breaking the build 🚨 [\#39](https://github.com/amalv/react-universal/issues/39)
+
+**Merged pull requests:**
+
+- Update flow-bin to the latest version 🚀 [\#44](https://github.com/amalv/react-universal/pull/44) ([greenkeeper[bot]](https://github.com/apps/greenkeeper))
+- Add snackbar for sign in [\#43](https://github.com/amalv/react-universal/pull/43) ([amalv](https://github.com/amalv))
+
 ## [v0.18.1](https://github.com/amalv/react-universal/tree/v0.18.1) (2019-02-26)
 [Full Changelog](https://github.com/amalv/react-universal/compare/v0.18.0...v0.18.1)
 
