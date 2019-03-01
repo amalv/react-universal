@@ -1,5 +1,12 @@
 # Change Log
 
+## [v0.20.0](https://github.com/amalv/react-universal/tree/v0.20.0) (2019-03-01)
+[Full Changelog](https://github.com/amalv/react-universal/compare/v0.19.0...v0.20.0)
+
+**Merged pull requests:**
+
+- Add cypress tests [\#45](https://github.com/amalv/react-universal/pull/45) ([amalv](https://github.com/amalv))
+
 ## [v0.19.0](https://github.com/amalv/react-universal/tree/v0.19.0) (2019-03-01)
 [Full Changelog](https://github.com/amalv/react-universal/compare/v0.18.1...v0.19.0)
 
