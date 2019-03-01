@@ -114,9 +114,8 @@ class SignIn extends React.Component<Props, State> {
 
   render() {
     const { theme } = this.props;
-    const { user, submitted, loading } = this.state;
+    const { user, submitted, loading, loginSuccess } = this.state;
     const { zIndex, ...rest } = theme;
-    const { loginSuccess } = this.state;
 
     const override = css`
       margin-top: 20%;
@@ -142,7 +141,16 @@ class SignIn extends React.Component<Props, State> {
               key="google"
               {...rest}
             >
-              Login with Google
+              Continue with Google
+            </SocialButton>
+            <SocialButton
+              provider="facebook"
+              appId={process.env.FACEBOOK_APP_ID}
+              onLoginSuccess={this.onLoginSuccess}
+              key="facebook"
+              {...rest}
+            >
+              Continue with Facebook
             </SocialButton>
             <Form onSubmit={this.handleSubmit} {...rest}>
               <FormControl margin="normal" required fullWidth>
@@ -181,7 +189,6 @@ class SignIn extends React.Component<Props, State> {
                 color="primary"
                 {...rest}
               >
-                {" "}
                 Sign in
               </ButtonStyled>
             </Form>

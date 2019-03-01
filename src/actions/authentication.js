@@ -12,11 +12,6 @@ const loginRequest = () => ({
   type: LOGIN_REQUEST,
 });
 
-const loginSuccess = user => ({
-  type: LOGIN_SUCCESS,
-  user,
-});
-
 const loginFailure = error => ({
   type: LOGIN_FAILURE,
   error,
@@ -33,6 +28,11 @@ const logoutSuccess = () => ({
 const logoutFailure = error => ({
   type: LOGOUT_FAILURE,
   error,
+});
+
+export const loginSuccess = user => ({
+  type: LOGIN_SUCCESS,
+  user,
 });
 
 export const establishCurrentUser = () => dispatch => {
