@@ -79,6 +79,7 @@ class SignUp extends React.Component<Props, State> {
                 autoComplete="username"
                 autoFocus
                 onChange={this.handleChange}
+                inputProps={{ "data-test": "sign-up-username" }}
               />
               {submitted && !user.username && (
                 <Error>Username is required</Error>
@@ -92,6 +93,7 @@ class SignUp extends React.Component<Props, State> {
                 id="password"
                 autoComplete="current-password"
                 onChange={this.handleChange}
+                inputProps={{ "data-test": "sign-up-password" }}
               />
               {submitted && !user.password && (
                 <Error>Password is required</Error>

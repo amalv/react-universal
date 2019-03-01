@@ -64,6 +64,7 @@ class Header extends React.Component<Props> {
       <Button
         component={props => <Link to={link.to} {...props} />}
         color="inherit"
+        data-test={link.text}
       >
         {link.text}
       </Button>
