@@ -6,7 +6,7 @@ before_script:
 script:
   - yarn build
 after_success:
-  - yarn lh --perf=90 https://loving-golick-23af51.netlify.com
+  - yarn lh --perf=85 https://loving-golick-23af51.netlify.com
   - yarn bundlesize
 before_install:
   - curl -o- -L https://yarnpkg.com/install.sh | bash
