@@ -1,5 +1,6 @@
-import { push } from "connected-react-router";
+import Cookies from "js-cookie";
 import { registerUser } from "../services";
+import { loginSuccess } from "./authentication";
 
 export const USER_REGISTER_REQUEST = "USER_REGISTER_REQUEST";
 export const USER_REGISTER_SUCCESS = "USER_REGISTER_SUCCESS";
@@ -23,11 +24,13 @@ const failure = error => ({
 export const register = user => {
   return dispatch => {
     dispatch(request(user));
+    const { username } = user;
 
     registerUser(user).then(
       registeredUser => {
+        Cookies.set("react-universal", { username });
         dispatch(success(registeredUser));
-        dispatch(push("/signin"));
+        dispatch(loginSuccess({ username }));
       },
       error => {
         dispatch(failure(error));
