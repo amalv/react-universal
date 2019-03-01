@@ -153,6 +153,7 @@ class SignIn extends React.Component<Props, State> {
                   autoComplete="username"
                   autoFocus
                   onChange={this.handleChange}
+                  inputProps={{ "data-test": "sign-in-username" }}
                 />
                 {submitted && !user.username && (
                   <Error>Username is required</Error>
@@ -166,6 +167,7 @@ class SignIn extends React.Component<Props, State> {
                   id="password"
                   autoComplete="current-password"
                   onChange={this.handleChange}
+                  inputProps={{ "data-test": "sign-in-password" }}
                 />
                 {submitted && !user.password && (
                   <Error>Password is required</Error>

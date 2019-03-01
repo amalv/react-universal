@@ -3,13 +3,15 @@
     "airbnb",
     "plugin:flowtype/recommended",
     "plugin:prettier/recommended",
-    "prettier/react"
+    "prettier/react",
+    "plugin:cypress/recommended"
   ],
   "parser": "babel-eslint",
-  "plugins": ["flowtype"],
+  "plugins": ["flowtype", "cypress"],
   "env": {
     "browser": true,
-    "jest": true
+    "jest": true,
+    "cypress/globals": true
   },
   "rules": {
     "react/jsx-filename-extension": [1, { "extensions": [".js"] }],

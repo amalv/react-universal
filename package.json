@@ -17,7 +17,8 @@
     "coverage": "jest --coverage",
     "coveralls": "jest --coverage --coverageReporters=text-lcov | coveralls",
     "lh": "lighthousebot",
-    "db": "json-server --watch db.json --port 3001"
+    "db": "json-server --watch db.json --port 3001",
+    "cypress:open": "cypress open"
   },
   "dependencies": {
     "@babel/register": "^7.0.0",
@@ -65,10 +66,12 @@
     "clean-webpack-plugin": "^1.0.1",
     "compression-webpack-plugin": "^2.0.0",
     "coveralls": "^3.0.2",
+    "cypress": "^3.1.5",
     "eslint": "^5.11.1",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-prettier": "^4.0.0",
     "eslint-loader": "^2.1.1",
+    "eslint-plugin-cypress": "^2.2.1",
     "eslint-plugin-flowtype": "^3.2.1",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.2",
