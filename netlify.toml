@@ -1,0 +1,16 @@
+[[redirects]]
+from = "/about"
+to = "/"
+status = 301 
+[[redirects]]
+from = "/users"
+to = "/"
+status = 301 
+[[redirects]]
+from = "/signup"
+to = "/"
+status = 301 
+[[redirects]]
+from = "/signin"
+to = "/"
+status = 301 
