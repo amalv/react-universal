@@ -1,5 +1,12 @@
 # Change Log
 
+## [v0.22.0](https://github.com/amalv/react-universal/tree/v0.22.0) (2019-03-04)
+[Full Changelog](https://github.com/amalv/react-universal/compare/v0.21.1...v0.22.0)
+
+**Merged pull requests:**
+
+- Update clean-webpack-plugin to the latest version 🚀 [\#48](https://github.com/amalv/react-universal/pull/48) ([greenkeeper[bot]](https://github.com/apps/greenkeeper))
+
 ## [v0.21.1](https://github.com/amalv/react-universal/tree/v0.21.1) (2019-03-04)
 [Full Changelog](https://github.com/amalv/react-universal/compare/v0.21.0...v0.21.1)
 
