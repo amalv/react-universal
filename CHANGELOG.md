@@ -1,5 +1,12 @@
 # Change Log
 
+## [v0.21.1](https://github.com/amalv/react-universal/tree/v0.21.1) (2019-03-04)
+[Full Changelog](https://github.com/amalv/react-universal/compare/v0.21.0...v0.21.1)
+
+**Merged pull requests:**
+
+- Add redirect for netlify [\#47](https://github.com/amalv/react-universal/pull/47) ([amalv](https://github.com/amalv))
+
 ## [v0.21.0](https://github.com/amalv/react-universal/tree/v0.21.0) (2019-03-01)
 [Full Changelog](https://github.com/amalv/react-universal/compare/v0.20.0...v0.21.0)
 
