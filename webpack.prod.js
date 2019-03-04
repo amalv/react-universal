@@ -6,25 +6,6 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
 const webpack = require("webpack");
 
-const plugins = [
-  new CleanWebpackPlugin(["dist"]),
-  new FriendlyErrorsWebpackPlugin(),
-  new CompressionPlugin(),
-  new HtmlWebpackPlugin({
-    template: "index.html",
-  }),
-  new BundleAnalyzerPlugin({
-    analyzerMode: "static",
-    reportFilename: "webpack-report.html",
-    openAnalyzer: false,
-  }),
-  new webpack.DefinePlugin({
-    "process.env.GOOGLE_CLIENT_ID": JSON.stringify(
-      process.env.GOOGLE_CLIENT_ID
-    ),
-  }),
-];
-
 module.exports = {
   context: path.join(__dirname, "src"),
   entry: {
@@ -52,5 +33,22 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
     filename: "[name].bundle.js",
   },
-  plugins,
+  plugins: [
+    new CleanWebpackPlugin(),
+    new FriendlyErrorsWebpackPlugin(),
+    new CompressionPlugin(),
+    new HtmlWebpackPlugin({
+      template: "index.html",
+    }),
+    new BundleAnalyzerPlugin({
+      analyzerMode: "static",
+      reportFilename: "webpack-report.html",
+      openAnalyzer: false,
+    }),
+    new webpack.DefinePlugin({
+      "process.env.GOOGLE_CLIENT_ID": JSON.stringify(
+        process.env.GOOGLE_CLIENT_ID
+      ),
+    }),
+  ]
 };

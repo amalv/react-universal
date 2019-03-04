@@ -4,13 +4,6 @@ const CompressionPlugin = require("compression-webpack-plugin");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
 const Dotenv = require("dotenv-webpack");
 
-const plugins = [
-  new CleanWebpackPlugin(["dist"]),
-  new FriendlyErrorsWebpackPlugin(),
-  new CompressionPlugin(),
-  new Dotenv(),
-];
-
 module.exports = {
   mode: "development",
   context: path.join(__dirname, "src"),
@@ -39,5 +32,10 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
     filename: "[name].bundle.js",
   },
-  plugins,
+  plugins: [
+    new CleanWebpackPlugin(),
+    new FriendlyErrorsWebpackPlugin(),
+    new CompressionPlugin(),
+    new Dotenv(),
+  ]
 };
