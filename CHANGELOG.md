@@ -1,5 +1,12 @@
 # Change Log
 
+## [v0.22.1](https://github.com/amalv/react-universal/tree/v0.22.1) (2019-03-04)
+[Full Changelog](https://github.com/amalv/react-universal/compare/v0.22.0...v0.22.1)
+
+**Merged pull requests:**
+
+- Remove Html webpack plugin [\#49](https://github.com/amalv/react-universal/pull/49) ([amalv](https://github.com/amalv))
+
 ## [v0.22.0](https://github.com/amalv/react-universal/tree/v0.22.0) (2019-03-04)
 [Full Changelog](https://github.com/amalv/react-universal/compare/v0.21.1...v0.22.0)
 
