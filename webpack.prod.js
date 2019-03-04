@@ -2,7 +2,6 @@ const path = require("path");
 const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
 const FriendlyErrorsWebpackPlugin = require("friendly-errors-webpack-plugin");
 const CompressionPlugin = require("compression-webpack-plugin");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
 const webpack = require("webpack");
 
@@ -37,9 +36,6 @@ module.exports = {
     new CleanWebpackPlugin(),
     new FriendlyErrorsWebpackPlugin(),
     new CompressionPlugin(),
-    new HtmlWebpackPlugin({
-      template: "index.html",
-    }),
     new BundleAnalyzerPlugin({
       analyzerMode: "static",
       reportFilename: "webpack-report.html",
@@ -50,5 +46,5 @@ module.exports = {
         process.env.GOOGLE_CLIENT_ID
       ),
     }),
-  ]
+  ],
 };
